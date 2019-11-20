@@ -16,7 +16,8 @@ class App extends React.Component {
         <Form />
         <div>
           <p>
-            Not sure how much cooking at home costs? Checkout our sister app NOM
+            Not sure how much cooking at home costs? Check out our sister app
+            NOM
           </p>
           <p>
             {" "}
