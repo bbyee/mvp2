@@ -1,4 +1,12 @@
 h1 {
   color: black;
-  background-color: white;
+  background-color: FFD800;
+}
+
+body {
+  background-color: #ffe066;
+}
+
+input {
+  width: 500px;
 }

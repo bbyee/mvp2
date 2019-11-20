@@ -15,7 +15,14 @@ class App extends React.Component {
         <h1>NOM Pantry</h1>
         <Form />
         <div>
-          Not sure how much cooking at home costs? Checkout our sister app NOM
+          <p>
+            Not sure how much cooking at home costs? Checkout our sister app NOM
+          </p>
+          <p>
+            {" "}
+            Need to eat cleaner? Try managing your macros with our companion app
+            NOM Fit
+          </p>
         </div>
       </div>
     );

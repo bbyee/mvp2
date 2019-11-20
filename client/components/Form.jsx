@@ -42,7 +42,7 @@ class Form extends React.Component {
   render() {
     return (
       <div>
-        <label>Whats in your fridge?</label>
+        <h2 className="headerlabel">Whats in your fridge?</h2>
         <input
           name="ingredients"
           type="text"
