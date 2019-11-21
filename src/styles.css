@@ -16,9 +16,38 @@ input {
   display: block;
 }
 
-h1,
-h2,
-h3,
+.companyname {
+  font-family: Helvetica;
+}
+
+p,
+h2 {
+  font-family: Helvetica;
+}
+
 input {
-  font: Roboto;
+  font-family: Helvetica;
+  border-radius: 5px;
+}
+
+button {
+  font-family: Helvetica;
+  border-radius: 5px;
+}
+
+span {
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+.instructions {
+  font-family: Helvetica;
+  font-weight: lighter;
+  font-size: medium;
+}
+
+.sourceURL {
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: medium;
 }

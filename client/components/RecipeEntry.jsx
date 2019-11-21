@@ -63,8 +63,10 @@ class RecipeEntry extends React.Component {
 
         {this.state.showLink ? (
           <h2 className="recipeLink">
-            <div>{this.state.selectedInstructions}</div>
-            <p>
+            <div className="instructions">
+              {this.state.selectedInstructions}
+            </div>
+            <p className="sourceURL">
               Visit recipe
               <a href={this.state.sourceUrl}> HERE</a>
             </p>
