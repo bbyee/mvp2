@@ -1,22 +1,12 @@
 import React from "react";
 import SPOON_API from "../../api.js";
 import axios from "axios";
+import Instructions from "./Instructions.jsx";
 
 class RecipeEntry extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: ""
-    };
-
-    this.getRecipeInfo = this.getRecipeInfo.bind(this);
-    this.handleEntryClick = this.handleEntryClick.bind(this);
-  }
-
-  handleEntryClick(event) {
-    console.log("event", event);
-    console.log("event targets value", event.target.value);
-    this.setState({
       selectedId: 0,
       selectedTitle: "",
       selectedImage: "",
@@ -24,10 +14,9 @@ class RecipeEntry extends React.Component {
       sourceUrl: "",
       showLink: false,
       selectedInstructions: ""
-    });
-    {
-      console.log("this.state.selected", this.state.selected);
-    }
+    };
+
+    this.getRecipeInfo = this.getRecipeInfo.bind(this);
   }
 
   getRecipeInfo(key = SPOON_API) {
@@ -36,6 +25,7 @@ class RecipeEntry extends React.Component {
         `https://api.spoonacular.com/recipes/${this.props.recipe.id}/information?includeInstruction=true&apiKey=${SPOON_API}`
       )
       .then(results => {
+        console.log("results of click on food name", results);
         this.setState({
           selectedId: results.data.id,
           selectedTitle: results.data.title,
@@ -45,13 +35,14 @@ class RecipeEntry extends React.Component {
         });
         console.log(
           "selected state:",
-          this.state.selectedId,
-          this.state.selectedTitle,
-          this.state.selectedImage,
-          this.state.sourceUrl,
+          // this.state.selectedId,
+          // this.state.selectedTitle,
+          // this.state.selectedImage,
+          // this.state.sourceUrl,
           this.state.selectedInstructions
         );
       })
+
       .catch(err => {
         console.log("err getting recipe info", err);
       });
@@ -70,13 +61,14 @@ class RecipeEntry extends React.Component {
           {this.props.recipe.title}
         </h2>
         <img src={this.props.recipe.image} alt="recipe image"></img>
+        <div>{this.state.selectedInstructions}</div>
+
         {this.state.showLink ? (
           <h2 className="recipeLink">
-            <p>{this.state.selectedInstructions}</p>
-            <h4>
+            <p>
               Visit recipe
               <a href={this.state.sourceUrl}> HERE</a>
-            </h4>
+            </p>
           </h2>
         ) : null}
       </div>

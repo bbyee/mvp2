@@ -10,3 +10,8 @@ body {
 input {
   width: 500px;
 }
+
+.title:hover {
+  background-color: darkcyan;
+  display: block;
+}

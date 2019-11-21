@@ -6,7 +6,7 @@ const RecipeList = props => {
   return (
     <div>
       {props.recipes.map(recipe => {
-        return <RecipeEntry recipe={recipe} />;
+        return <RecipeEntry id={recipe.id} recipe={recipe} />;
       })}
     </div>
   );

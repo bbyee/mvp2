@@ -16,13 +16,13 @@ class App extends React.Component {
         <Form />
         <div>
           <p>
-            Not sure how much cooking at home costs? Check out our sister app
-            NOM
+            Worried how much cooking at home costs? Check out our sister app NOM
+            Money HERE
           </p>
           <p>
             {" "}
             Need to eat cleaner? Try managing your macros with our companion app
-            NOM Fit
+            NOM Fit HERE
           </p>
         </div>
       </div>
