@@ -51,3 +51,7 @@ span {
   font-weight: bold;
   font-size: medium;
 }
+
+.promolink:hover {
+  background-color: palevioletred;
+}

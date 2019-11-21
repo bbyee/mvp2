@@ -19,7 +19,10 @@ class App extends React.Component {
             Worried how much cooking at home costs?{" "}
             <span>
               Check out our sister app NOM Money{" "}
-              <a href="http://ec2-3-17-167-188.us-east-2.compute.amazonaws.com">
+              <a
+                className="promolink"
+                href="http://ec2-3-17-167-188.us-east-2.compute.amazonaws.com"
+              >
                 HERE
               </a>
             </span>
@@ -28,7 +31,14 @@ class App extends React.Component {
             {" "}
             Need to eat cleaner?{" "}
             <span>
-              Try managing your macros with our companion app NOM Fit HERE
+              Try managing your macros with our companion app NOM Fit
+              <a
+                className="promolink"
+                href="https://shielded-coast-92839.herokuapp.com/"
+              >
+                {" "}
+                HERE
+              </a>
             </span>
           </p>
         </div>
