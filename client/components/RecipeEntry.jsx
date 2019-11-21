@@ -12,10 +12,13 @@ class RecipeEntry extends React.Component {
       selectedLikes: 0,
       sourceUrl: "",
       showLink: false,
-      selectedInstructions: ""
+      selectedInstructions: "",
+      favoriteId: 0,
+      favoriteTitle: ""
     };
 
     this.getRecipeInfo = this.getRecipeInfo.bind(this);
+    this.saveFavorite = this.saveFavorite.bind(this);
   }
 
   getRecipeInfo(key = SPOON_API) {
@@ -24,7 +27,6 @@ class RecipeEntry extends React.Component {
         `https://api.spoonacular.com/recipes/${this.props.recipe.id}/information?includeInstruction=true&apiKey=${SPOON_API}`
       )
       .then(results => {
-        console.log("results of click on food name", results);
         this.setState({
           selectedId: results.data.id,
           selectedTitle: results.data.title,
@@ -32,18 +34,25 @@ class RecipeEntry extends React.Component {
           sourceUrl: results.data.sourceUrl,
           selectedInstructions: results.data.instructions
         });
-        console.log(
-          "selected state:",
-          // this.state.selectedId,
-          // this.state.selectedTitle,
-          // this.state.selectedImage,
-          // this.state.sourceUrl,
-          this.state.selectedInstructions
-        );
       })
-
       .catch(err => {
         console.log("err getting recipe info", err);
+      });
+  }
+
+  saveFavorite(favoriteId, favoriteTitle) {
+    axios
+      .post("/faves", {
+        id: this.props.recipe.id,
+        title: this.props.recipe.title
+      })
+      .then(() => {
+        console.log("successfully saved fave to db");
+        res.sendStatus(201);
+      })
+      .catch(err => {
+        console.log("error saving fave to db");
+        res.sendStatus(500);
       });
   }
 
@@ -70,6 +79,23 @@ class RecipeEntry extends React.Component {
             </p>
           </h2>
         ) : null}
+        <button
+          onClick={() => {
+            this.saveFavorite(this.props.recipe.id, this.props.recipe.title);
+            // this.setState({
+            //   favoriteId: this.state.selectedId,
+            //   favoriteTitle: this.state.selectedTitle
+            // });
+            console.log(
+              "EHERHEHEHR",
+              this.props.recipe.id,
+              this.props.recipe.title
+            );
+            // this.saveFavorite(this.state.favoriteId, this.state.favoriteTitle);
+          }}
+        >
+          Save as Favorite
+        </button>
       </div>
     );
   }
