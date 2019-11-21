@@ -15,3 +15,10 @@ input {
   background-color: darkcyan;
   display: block;
 }
+
+h1,
+h2,
+h3,
+input {
+  font: Roboto;
+}

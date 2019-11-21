@@ -1,7 +1,6 @@
 import React from "react";
 import SPOON_API from "../../api.js";
 import axios from "axios";
-import Instructions from "./Instructions.jsx";
 
 class RecipeEntry extends React.Component {
   constructor(props) {
@@ -61,10 +60,10 @@ class RecipeEntry extends React.Component {
           {this.props.recipe.title}
         </h2>
         <img src={this.props.recipe.image} alt="recipe image"></img>
-        <div>{this.state.selectedInstructions}</div>
 
         {this.state.showLink ? (
           <h2 className="recipeLink">
+            <div>{this.state.selectedInstructions}</div>
             <p>
               Visit recipe
               <a href={this.state.sourceUrl}> HERE</a>
