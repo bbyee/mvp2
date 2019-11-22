@@ -1,4 +1,4 @@
-# mvp2
+# NOM Pantry
 
 A dynamic MVP recipe recommendation application based on user's available ingredient inputs.
 
