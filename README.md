@@ -36,11 +36,11 @@ To deploy this application with an AWS EC2 instance:
 1. Go to https://aws.amazon.com/
 
 2. Launch a new EC2 instance
- ..* For AMI, choose Ubuntu Server 18.04 and select the t2 microservice instance type.
- ..* Use the default Configuration Details and Storage options.
- ..* Add any Tags you want (optional).
- ..* Add HTTP and HTTPS protocol types with default port settings.
- ..* Review and launch instance.
+* For AMI, choose Ubuntu Server 18.04 and select the t2 microservice instance type.
+* Use the default Configuration Details and Storage options.
+* Add any Tags you want (optional).
+* Add HTTP and HTTPS protocol types with default port settings.
+* Review and launch instance.
  
 3. Connect to the EC2 instance and run the ssh command for it in your command line.
 
