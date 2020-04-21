@@ -21,26 +21,28 @@ input {
 } */
 
 .logo {
-
 }
 
 p,
 h2 {
-  font-family: Helvetica;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: lighter;
 }
 
 input {
-  font-family: Helvetica;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: lighter;
   border-radius: 5px;
 }
 
 button {
-  font-family: Helvetica;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: lighter;
   border-radius: 5px;
 }
 
 span {
-  font-family: Helvetica;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-weight: bold;
 }
 
@@ -51,8 +53,8 @@ span {
 }
 
 .sourceURL {
-  font-family: Helvetica;
-  font-weight: bold;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: lighter;
   font-size: medium;
 }
 

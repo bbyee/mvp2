@@ -8,7 +8,7 @@ class Form extends React.Component {
     super(props);
     this.state = {
       ingredients: "",
-      recipes: []
+      recipes: [],
     };
 
     //bind methods here:
@@ -17,25 +17,25 @@ class Form extends React.Component {
   }
 
   getRecipes(ingredients, key = SPOON_API) {
-    console.log("ingredients here:", this.state.ingredients);
-    console.log("ahjaf", SPOON_API);
+    // console.log("ingredients here:", this.state.ingredients);
+    // console.log("ahjaf", SPOON_API);
     event.preventDefault();
 
     axios
       .get(
         `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${this.state.ingredients}&number=3&ranking=2&ignorePantry=true&apiKey=${SPOON_API}`
       )
-      .then(results => {
+      .then((results) => {
         this.setState({ recipes: results.data });
         console.log("this.state of recipes", this.state.recipes);
       })
-      .catch(err => {
+      .catch((err) => {
         console.log("err in getRecipes", err);
       });
   }
 
   handleChange(event) {
-    console.log("event here", event.target.value);
+    // console.log("event here", event.target.value);
     this.setState({ ingredients: event.target.value });
   }
 
