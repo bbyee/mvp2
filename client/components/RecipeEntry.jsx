@@ -41,7 +41,6 @@ class RecipeEntry extends React.Component {
           this.state.selectedInstructions
         );
       })
-
       .catch(err => {
         console.log("err getting recipe info", err);
       });

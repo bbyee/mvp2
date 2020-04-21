@@ -4,7 +4,7 @@ h1 {
 }
 
 body {
-  background-color: #ffe066;
+  background-color: whitesmoke;
 }
 
 input {
@@ -16,8 +16,12 @@ input {
   display: block;
 }
 
-.companyname {
+/* .companyname {
   font-family: Helvetica;
+} */
+
+.logo {
+
 }
 
 p,

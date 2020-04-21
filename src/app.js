@@ -5,14 +5,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-
-    //bind methods here:
   }
 
   render() {
     return (
       <div>
-        <h1 className="companyname">NOM Pantry</h1>
+        <h1 className="logo">
+          <img src="nompantrylogo.png" />
+        </h1>
         <Form />
         <div>
           <p>
