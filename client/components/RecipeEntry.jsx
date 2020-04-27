@@ -50,6 +50,11 @@ class RecipeEntry extends React.Component {
       });
   }
 
+  //make function that can grab other recipe data with recipe's ID, servings, time to prepare etc
+  getMetaData(id) {
+
+  }
+
   render() {
     return (
       <div>

@@ -49,7 +49,7 @@ span {
 .instructions {
   font-family: Helvetica;
   font-weight: lighter;
-  font-size: medium;
+  font-size: 15px;
 }
 
 .sourceURL {
